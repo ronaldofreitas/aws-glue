@@ -12,10 +12,10 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 
 connection_mysql8_options = {
-    "url": "jdbc:mysql://mysql743.umbler.com:41890/dappsxistms",
-    "dbtable": "wp_posts",
-    "user": "wpdxjkas",
-    "password": "262dsadasd566SS65dsa",
+    "url": "jdbc:banco_protocol://host:porta/banco",
+    "dbtable": "tabela",
+    "user": "user",
+    "password": "senha",
     "customJdbcDriverS3Path": "s3://glue-dependencies-teste/dependencies/mysql-connector-java-8.0.19.jar",
     "customJdbcDriverClassName": "com.mysql.cj.jdbc.Driver"
 }
