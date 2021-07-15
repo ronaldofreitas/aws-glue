@@ -28,11 +28,11 @@ df_mysql8 = glueContext.create_dynamic_frame.from_options(connection_type="mysql
 #glueContext.write_from_options(frame_or_dfc=df_mysql5, connection_type="mysql", connection_options=connection_mysql8_options)
 
 user_spark_df = spark.read.format("jdbc") \
-    .option("url", "jdbc:mysql://mysql743.umbler.com:41890/dappsxistms") \
+    .option("url", "jdbc:mysql://host:port/banco") \
     .option("driver", "com.mysql.jdbc.Driver") \
-    .option("dbtable", "wp_posts") \
-    .option("user", "wpdxjkas") \
-    .option("password", "262dsadasd566SS65dsa") \
+    .option("dbtable", "tabela") \
+    .option("user", "usuario") \
+    .option("password", "senha") \
     .load()
 
 print('total posts', user_spark_df.count())
